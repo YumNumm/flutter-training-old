@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_training/ui/theme/theme.dart';
-import 'package:flutter_training/ui/view/main_view.dart';
+import 'package:flutter_training/ui/view/weather_result_view/weather_result_view.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,7 +16,7 @@ class App extends StatelessWidget {
       title: 'Yumemi Weather',
       theme: lightTheme,
       darkTheme: darkTheme,
-      home: const MainView(),
+      home: const WeatherResultView(),
     );
   }
 }
