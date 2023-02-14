@@ -42,22 +42,13 @@ Dart には [Mixin] という機能があり、公式パッケージから [Auto
 
 <!-- Links -->
 
-[Mixin]: https://dart.dev/guides/language/language-tour#adding-features-to-a-class-mixins
-
-[AutomaticKeepAliveClientMixin]: https://api.flutter.dev/flutter/widgets/AutomaticKeepAliveClientMixin-mixin.html
-
-[TextSelectionDelegate]: https://api.flutter.dev/flutter/services/TextSelectionDelegate-mixin.html
-
-[Session3]: 4
-
-[フリー百科事典『ウィキペディア（Wikipedia）』]: https://ja.wikipedia.org/wiki/Mixin
-
-[Scala]: https://docs.scala-lang.org/tour/mixin-class-composition.html
-
-[Ruby]: https://ruby-doc.com/docs/ProgrammingRuby/html/tut_modules.html
-
-[Kotlin]: https://kotlinlang.org/docs/interfaces.html
-
-[Swift]: https://docs.swift.org/swift-book/LanguageGuide/Protocols.html
-
-[JavaScript]: https://javascript.info/mixins
+[mixin]: https://dart.dev/guides/language/language-tour#adding-features-to-a-class-mixins
+[automatickeepaliveclientmixin]: https://api.flutter.dev/flutter/widgets/AutomaticKeepAliveClientMixin-mixin.html
+[textselectiondelegate]: https://api.flutter.dev/flutter/services/TextSelectionDelegate-mixin.html
+[session3]: 4
+[フリー百科事典『ウィキペディア（wikipedia）』]: https://ja.wikipedia.org/wiki/Mixin
+[scala]: https://docs.scala-lang.org/tour/mixin-class-composition.html
+[ruby]: https://ruby-doc.com/docs/ProgrammingRuby/html/tut_modules.html
+[kotlin]: https://kotlinlang.org/docs/interfaces.html
+[swift]: https://docs.swift.org/swift-book/LanguageGuide/Protocols.html
+[javascript]: https://javascript.info/mixins

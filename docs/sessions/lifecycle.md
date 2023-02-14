@@ -29,20 +29,12 @@ iOS・Android と異なる点があるため、きちんと確認しておきま
 
 <!-- Links -->
 
-[StatefulWidget]: https://api.flutter.dev/flutter/widgets/StatefulWidget-class.html
-
-[UIViewController]: https://developer.apple.com/documentation/uikit/uiviewcontroller
-
-[Activity]: https://developer.android.com/guide/components/activities/activity-lifecycle
-
-[`Colors.green`]: https://api.flutter.dev/flutter/material/Colors/green-constant.html
-
+[statefulwidget]: https://api.flutter.dev/flutter/widgets/StatefulWidget-class.html
+[uiviewcontroller]: https://developer.apple.com/documentation/uikit/uiviewcontroller
+[activity]: https://developer.android.com/guide/components/activities/activity-lifecycle
+[`colors.green`]: https://api.flutter.dev/flutter/material/Colors/green-constant.html
 [demo]: https://github.com/yumemi-inc/flutter-training-template/blob/main/docs/sessions/images/lifecycle/demo.gif?raw=true
-
-[WidgetsBinding.instance.endOfFrame]: https://api.flutter.dev/flutter/scheduler/SchedulerBinding/endOfFrame.html
-
-[Navigator]: https://api.flutter.dev/flutter/widgets/Navigator-class.html
-
-[How do I listen to iOS lifecycle events?]: https://docs.flutter.dev/get-started/flutter-for/ios-devs#how-do-i-listen-to-ios-lifecycle-events
-
-[How do I listen to Android activity lifecycle events?]: https://docs.flutter.dev/get-started/flutter-for/android-devs#how-do-i-listen-to-android-activity-lifecycle-events
+[widgetsbinding.instance.endofframe]: https://api.flutter.dev/flutter/scheduler/SchedulerBinding/endOfFrame.html
+[navigator]: https://api.flutter.dev/flutter/widgets/Navigator-class.html
+[how do i listen to ios lifecycle events?]: https://docs.flutter.dev/get-started/flutter-for/ios-devs#how-do-i-listen-to-ios-lifecycle-events
+[how do i listen to android activity lifecycle events?]: https://docs.flutter.dev/get-started/flutter-for/android-devs#how-do-i-listen-to-android-activity-lifecycle-events

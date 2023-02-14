@@ -5,12 +5,12 @@
 ## 課題
 
 - 次の [Widget tests] を書く
-    - 特定の条件で、天気予報画面に晴れの画像が表示されること
-    - 特定の条件で、天気予報画面に曇りの画像が表示されること
-    - 特定の条件で、天気予報画面に雨の画像が表示されること
-    - 特定の条件で、天気予報画面に最高気温が表示されること
-    - 特定の条件で、天気予報画面に最低気温が表示されること
-    - 特定の条件で、天気予報画面にダイアログが表示され、特定のメッセージが表示されること
+  - 特定の条件で、天気予報画面に晴れの画像が表示されること
+  - 特定の条件で、天気予報画面に曇りの画像が表示されること
+  - 特定の条件で、天気予報画面に雨の画像が表示されること
+  - 特定の条件で、天気予報画面に最高気温が表示されること
+  - 特定の条件で、天気予報画面に最低気温が表示されること
+  - 特定の条件で、天気予報画面にダイアログが表示され、特定のメッセージが表示されること
 - 余裕があれば、他の [Widget tests] も書く
 
 ## ヒント
@@ -25,8 +25,6 @@
 
 <!-- Links -->
 
-[Widget tests]: https://docs.flutter.dev/testing#widget-tests
-
-[Session9]: 10
-
-[Riverpod Testing]: https://docs-v2.riverpod.dev/docs/cookbooks/testing
+[widget tests]: https://docs.flutter.dev/testing#widget-tests
+[session9]: 10
+[riverpod testing]: https://docs-v2.riverpod.dev/docs/cookbooks/testing

@@ -13,7 +13,7 @@ Flutter のテストは次の３つに分類されます。
 ## 課題
 
 - [yumemi_weather] API の呼び出しから Widget へ通知する部分までの [Unit tests] を書く
-    - 依存しているものが、成功・失敗するケースも網羅する
+  - 依存しているものが、成功・失敗するケースも網羅する
 - 余力があれば、JSON のエンコード・デコードの [Unit tests] も書く
 
 ※ テストコードを書くにあたって、依存関係を見直すなどのリファクタリングを行っても問題ありません。
@@ -30,14 +30,9 @@ Flutter のテストは次の３つに分類されます。
 
 <!-- Links -->
 
-[Unit tests]: https://docs.flutter.dev/testing#unit-tests
-
-[Widget tests]: https://docs.flutter.dev/testing#widget-tests
-
-[Integration tests]: https://docs.flutter.dev/testing#integration-tests
-
+[unit tests]: https://docs.flutter.dev/testing#unit-tests
+[widget tests]: https://docs.flutter.dev/testing#widget-tests
+[integration tests]: https://docs.flutter.dev/testing#integration-tests
 [yumemi_weather]: https://github.com/yumemi-inc/flutter-training-template/blob/main/packages/yumemi_weather/README.md
-
-[Mockito]: https://docs.flutter.dev/cookbook/testing/unit/mocking
-
-[Riverpod Testing]: https://docs-v2.riverpod.dev/docs/cookbooks/testing
+[mockito]: https://docs.flutter.dev/cookbook/testing/unit/mocking
+[riverpod testing]: https://docs-v2.riverpod.dev/docs/cookbooks/testing

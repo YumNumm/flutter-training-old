@@ -6,7 +6,7 @@
 
 - 使用する API を `fetchSimpleWeather()` から `fetchThrowsWeather()` に変更する
 - API のエラーを補足して、エラーの内容に応じて [AlertDialog] でメッセージを表示する
-    - メッセージの内容は自由
+  - メッセージの内容は自由
 - [AlertDialog] の OK ボタンをタップすると、ダイアログを閉じる
 
 ## 動作イメージ
@@ -22,7 +22,5 @@
 <!-- Links -->
 
 [yumemi_weather]: https://github.com/yumemi-inc/flutter-training-template/blob/main/packages/yumemi_weather/README.md
-
-[AlertDialog]: https://api.flutter.dev/flutter/material/AlertDialog-class.html
-
+[alertdialog]: https://api.flutter.dev/flutter/material/AlertDialog-class.html
 [demo]: https://github.com/yumemi-inc/flutter-training-template/blob/main/docs/sessions/images/error/demo.gif?raw=true

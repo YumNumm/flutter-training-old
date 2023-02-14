@@ -36,18 +36,11 @@ IDE の機能をうまく活用すると、素早くクラスを作成できる�
 
 <!-- Links -->
 
-[JSON を変換する仕組み]: https://dart.dev/guides/libraries/library-tour#dartconvert---decoding-and-encoding-json-utf-8-and-more
-
+[json を変換する仕組み]: https://dart.dev/guides/libraries/library-tour#dartconvert---decoding-and-encoding-json-utf-8-and-more
 [json_serializable]: https://pub.dev/packages/json_serializable
-
 [freezed]: https://pub.dev/packages/freezed
-
 [build.yaml]: https://github.com/google/json_serializable.dart/tree/master/json_serializable#build-configuration
-
-[Extension]: https://code.visualstudio.com/docs/editor/extension-marketplace
-
-[Snippets]: https://code.visualstudio.com/docs/editor/userdefinedsnippets
-
-[Plugins]: https://pleiades.io/help/idea/managing-plugins.html
-
-[Live templates]: https://www.jetbrains.com/help/idea/using-live-templates.html
+[extension]: https://code.visualstudio.com/docs/editor/extension-marketplace
+[snippets]: https://code.visualstudio.com/docs/editor/userdefinedsnippets
+[plugins]: https://pleiades.io/help/idea/managing-plugins.html
+[live templates]: https://www.jetbrains.com/help/idea/using-live-templates.html

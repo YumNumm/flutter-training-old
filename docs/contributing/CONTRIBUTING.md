@@ -34,11 +34,8 @@ Issue がすでに存在するかどうかを検索します。
 おめでとうございます 🎉
 そして、ありがとうございます ✨
 
-
 <!-- Links -->
 
-[Discussions]: https://github.com/yumemi-inc/flutter-training-template/discussions
-
-[Issue フォーム]: https://github.com/yumemi-inc/flutter-training-template/issues/new/choose
-
+[discussions]: https://github.com/yumemi-inc/flutter-training-template/discussions
+[issue フォーム]: https://github.com/yumemi-inc/flutter-training-template/issues/new/choose
 [セルフレビュー]: SELF_REVIEW.md

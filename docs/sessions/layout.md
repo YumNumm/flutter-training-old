@@ -47,43 +47,23 @@ Flutter には iOS の [NSLayoutConstraint] や Android の [ConstraintLayout] �
 <!-- Links -->
 
 [horizontal-ratio]: https://github.com/yumemi-inc/flutter-training-template/blob/main/docs/sessions/images/layout/horizontal-ratio.png?raw=true
-
 [aspect-ratio]: https://github.com/yumemi-inc/flutter-training-template/blob/main/docs/sessions/images/layout/aspect-ratio.png?raw=true
-
 [text-padding]: https://github.com/yumemi-inc/flutter-training-template/blob/main/docs/sessions/images/layout/text-padding.png?raw=true
-
 [centering]: https://github.com/yumemi-inc/flutter-training-template/blob/main/docs/sessions/images/layout/centering.png?raw=true
-
 [button-margin]: https://github.com/yumemi-inc/flutter-training-template/blob/main/docs/sessions/images/layout/button-margin.png?raw=true
-
 [button-centering]: https://github.com/yumemi-inc/flutter-training-template/blob/main/docs/sessions/images/layout/button-centering.png?raw=true
-
-[Placeholder]: https://api.flutter.dev/flutter/widgets/Placeholder-class.html
-
-[Text]: https://api.flutter.dev/flutter/widgets/Text-class.html
-
-[`labelLarge`]: https://api.flutter.dev/flutter/material/TextTheme/labelLarge.html
-
-[`Colors.blue`]: https://api.flutter.dev/flutter/material/Colors/blue-constant.html
-
-[`Colors.red`]: https://api.flutter.dev/flutter/material/Colors/red-constant.html
-
-[TextButton]: https://api.flutter.dev/flutter/material/TextButton-class.html
-
-[NSLayoutConstraint]: https://developer.apple.com/documentation/uikit/nslayoutconstraint
-
-[ConstraintLayout]: https://developer.android.com/develop/ui/views/layout/constraint-layout
-
-[Row]: https://api.flutter.dev/flutter/widgets/Row-class.html
-
-[Column]: https://api.flutter.dev/flutter/widgets/Column-class.html
-
-[Flexible]: https://api.flutter.dev/flutter/widgets/Flexible-class.html
-
-[Expanded]: https://api.flutter.dev/flutter/widgets/Expanded-class.html
-
-[AspectRatio]: https://api.flutter.dev/flutter/widgets/AspectRatio-class.html
-
-[FractionallySizedBox]: https://api.flutter.dev/flutter/widgets/FractionallySizedBox-class.html
-
-[Flutter Inspector]: https://docs.flutter.dev/development/tools/devtools/inspector
+[placeholder]: https://api.flutter.dev/flutter/widgets/Placeholder-class.html
+[text]: https://api.flutter.dev/flutter/widgets/Text-class.html
+[`labellarge`]: https://api.flutter.dev/flutter/material/TextTheme/labelLarge.html
+[`colors.blue`]: https://api.flutter.dev/flutter/material/Colors/blue-constant.html
+[`colors.red`]: https://api.flutter.dev/flutter/material/Colors/red-constant.html
+[textbutton]: https://api.flutter.dev/flutter/material/TextButton-class.html
+[nslayoutconstraint]: https://developer.apple.com/documentation/uikit/nslayoutconstraint
+[constraintlayout]: https://developer.android.com/develop/ui/views/layout/constraint-layout
+[row]: https://api.flutter.dev/flutter/widgets/Row-class.html
+[column]: https://api.flutter.dev/flutter/widgets/Column-class.html
+[flexible]: https://api.flutter.dev/flutter/widgets/Flexible-class.html
+[expanded]: https://api.flutter.dev/flutter/widgets/Expanded-class.html
+[aspectratio]: https://api.flutter.dev/flutter/widgets/AspectRatio-class.html
+[fractionallysizedbox]: https://api.flutter.dev/flutter/widgets/FractionallySizedBox-class.html
+[flutter inspector]: https://docs.flutter.dev/development/tools/devtools/inspector
