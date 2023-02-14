@@ -13,7 +13,10 @@ dependencies:
     sdk: flutter
   flutter_riverpod: ^2.2.0
   flutter_svg: ^2.0.1
+  hooks_riverpod: ^2.2.0
   riverpod_annotation: ^1.2.1
+  yumemi_weather:
+    path: packages/yumemi_weather
 
 dev_dependencies:
   blendthink_lints: ^3.0.0
