@@ -8,16 +8,19 @@ environment:
   sdk: ">=2.19.2 <3.0.0"
 
 dependencies:
+  cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.2
-  pedantic_mono: ^1.21.1
+  flutter_svg: ^2.0.1
 
 dev_dependencies:
+  blendthink_lints: ^3.0.0
+  build_runner: ^2.3.3
+  flutter_gen_runner: ^5.2.0
   flutter_test:
     sdk: flutter
 
-  blendthink_lints: ^3.0.0
+  pedantic_mono: ^1.21.1
 
 flutter:
   uses-material-design: true
