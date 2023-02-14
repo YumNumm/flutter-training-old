@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_training/ui/theme/theme.dart';
 import 'package:flutter_training/ui/view/main_view.dart';
 
 Future<void> main() async {
@@ -13,10 +14,8 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Yumemi Weather',
-      theme: ThemeData(
-        useMaterial3: true,
-        colorScheme: const ColorScheme.light(),
-      ),
+      theme: lightTheme,
+      darkTheme: darkTheme,
       home: const MainView(),
     );
   }
