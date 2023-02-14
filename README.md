@@ -51,9 +51,10 @@ Session1 がレビュー待ちの場合...
 2. Session2 を進める
 3. `session/1` のマージ後、`session/2` を `main` で `rebase` する
 
-[^1]: このようなケースで `rebase` コマンドを使うことが必ずしも正しいとは限りません。
-どのような方法をとるかはチームで議論するべきと考えます。
-ただ、この研修は「`rebase` コマンドを使ってみる」ことも研修の一部としています。
+[^1]:
+    このようなケースで `rebase` コマンドを使うことが必ずしも正しいとは限りません。
+    どのような方法をとるかはチームで議論するべきと考えます。
+    ただ、この研修は「`rebase` コマンドを使ってみる」ことも研修の一部としています。
 
 ## 課題
 
@@ -84,29 +85,16 @@ Session1 がレビュー待ちの場合...
 <!-- Links -->
 
 [templates]: .github/templates
-
-[Session0-Setup]: docs/sessions/setup.md
-
-[Session1-Layout]: docs/sessions/layout.md
-
-[Session2-API]: docs/sessions/api.md
-
-[Session3-Lifecycle]: docs/sessions/lifecycle.md
-
-[Session4-Mixin]: docs/sessions/mixin.md
-
-[Session5-Error]: docs/sessions/error.md
-
-[Session6-JSON]: docs/sessions/json.md
-
-[Session7-Serialization]: docs/sessions/serialization.md
-
-[Session8-StateManagement]: docs/sessions/state_management.md
-
-[Session9-UnitTest]: docs/sessions/unit_test.md
-
-[Session10-WidgetTest]: docs/sessions/widget_test.md
-
-[Session11-ThreadBlock]: docs/sessions/thread_block.md
-
+[session0-setup]: docs/sessions/setup.md
+[session1-layout]: docs/sessions/layout.md
+[session2-api]: docs/sessions/api.md
+[session3-lifecycle]: docs/sessions/lifecycle.md
+[session4-mixin]: docs/sessions/mixin.md
+[session5-error]: docs/sessions/error.md
+[session6-json]: docs/sessions/json.md
+[session7-serialization]: docs/sessions/serialization.md
+[session8-statemanagement]: docs/sessions/state_management.md
+[session9-unittest]: docs/sessions/unit_test.md
+[session10-widgettest]: docs/sessions/widget_test.md
+[session11-threadblock]: docs/sessions/thread_block.md
 [貢献ガイド]: docs/contributing/CONTRIBUTING.md

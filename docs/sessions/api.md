@@ -25,17 +25,11 @@
 
 Flutter で SVG を表示するときは、[flutter_svg] を利用すると簡単に表示できます。
 
-
 <!-- Links -->
 
 [yumemi_weather]: https://github.com/yumemi-inc/flutter-training-template/blob/main/packages/yumemi_weather/README.md
-
 [sunny]: https://github.com/yumemi-inc/flutter-training-template/blob/main/docs/sessions/images/api/sunny.svg
-
 [cloudy]: https://github.com/yumemi-inc/flutter-training-template/blob/main/docs/sessions/images/api/cloudy.svg
-
 [rainy]: https://github.com/yumemi-inc/flutter-training-template/blob/main/docs/sessions/images/api/rainy.svg
-
 [demo]: https://github.com/yumemi-inc/flutter-training-template/blob/main/docs/sessions/images/api/demo.gif?raw=true
-
 [flutter_svg]: https://pub.dev/packages/flutter_svg

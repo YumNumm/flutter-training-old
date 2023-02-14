@@ -31,10 +31,10 @@ flowchart TB
     style stop1 height:0px;
     start2[ ] --->|listen| stop2[ ]
     style start2 height:0px;
-    style stop2 height:0px; 
+    style stop2 height:0px;
     start3[ ] ===>|watch| stop3[ ]
     style start3 height:0px;
-    style stop3 height:0px; 
+    style stop3 height:0px;
   end
 
   subgraph Type
@@ -60,19 +60,14 @@ flowchart TB
 
 ## 参考資料
 
-- [Flutterの状態管理手法の選定]
-- [【2021年版】Flutterの状態管理パターン総まとめ]
+- [Flutter の状態管理手法の選定]
+- [【2021 年版】Flutter の状態管理パターン総まとめ]
 
 <!-- Links -->
 
-[List of state management approaches]: https://docs.flutter.dev/development/data-and-backend/state-mgmt/options
-
-[Provider]: https://pub.dev/packages/provider
-
-[Riverpod]: https://pub.dev/packages/riverpod
-
-[Different Types of Providers]: https://docs-v2.riverpod.dev/docs/concepts/providers/#different-types-of-providers
-
-[Flutterの状態管理手法の選定]: https://medium.com/flutter-jp/state-1daa7fd66b94
-
-[【2021年版】Flutterの状態管理パターン総まとめ]: https://qiita.com/datake914/items/f91acf30a640447c57c8
+[list of state management approaches]: https://docs.flutter.dev/development/data-and-backend/state-mgmt/options
+[provider]: https://pub.dev/packages/provider
+[riverpod]: https://pub.dev/packages/riverpod
+[different types of providers]: https://docs-v2.riverpod.dev/docs/concepts/providers/#different-types-of-providers
+[flutterの状態管理手法の選定]: https://medium.com/flutter-jp/state-1daa7fd66b94
+[【2021年版】flutterの状態管理パターン総まとめ]: https://qiita.com/datake914/items/f91acf30a640447c57c8
