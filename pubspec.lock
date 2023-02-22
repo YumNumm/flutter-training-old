@@ -315,6 +315,11 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_web_plugins:
+    dependency: transitive
+    description: flutter
+    source: sdk
+    version: "0.0.0"
   freezed:
     dependency: "direct dev"
     description:
@@ -347,6 +352,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.1"
+  go_router:
+    dependency: "direct main"
+    description:
+      name: go_router
+      sha256: "7a79232827c851f6b9f08c3c7254a1eaff7bc6aa147e103e51f951c5c10b0ccc"
+      url: "https://pub.dev"
+    source: hosted
+    version: "6.0.9"
+  go_router_builder:
+    dependency: "direct dev"
+    description:
+      name: go_router_builder
+      sha256: "3a29c7d0fb7a9a9ebf01fcf271594bae3f3e4aac8c322c49dcbcfcf5b597644b"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.1.1"
   graphs:
     dependency: transitive
     description:
@@ -483,6 +504,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.1"
+  path_to_regexp:
+    dependency: transitive
+    description:
+      name: path_to_regexp
+      sha256: "169d78fbd55e61ea8873bcca545979f559d22238f66facdd7ef30870c7f53327"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.4.0"
   pedantic_mono:
     dependency: "direct dev"
     description:

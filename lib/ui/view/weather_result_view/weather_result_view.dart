@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_training/model/enum/weather_category.dart';
 import 'package:flutter_training/ui/component/weather_item_widget.dart';
+import 'package:flutter_training/ui/view/route.dart';
 import 'package:flutter_training/ui/view/weather_result_view/weather_result_viewmodel.dart';
 
 class WeatherResultView extends ConsumerWidget {
@@ -34,7 +35,7 @@ class WeatherResultView extends ConsumerWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           TextButton(
-                            onPressed: () {},
+                            onPressed: () => ref.read(routerProvider).pop(),
                             child: const Text('Close'),
                           ),
                           TextButton(
