@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_training/ui/theme/theme.dart';
 import 'package:flutter_training/ui/view/weather_result_view/weather_result_view.dart';
 
@@ -12,11 +13,13 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Yumemi Weather',
-      theme: lightTheme,
-      darkTheme: darkTheme,
-      home: const WeatherResultView(),
+    return ProviderScope(
+      child: MaterialApp(
+        title: 'Yumemi Weather',
+        theme: lightTheme,
+        darkTheme: darkTheme,
+        home: const WeatherResultView(),
+      ),
     );
   }
 }
