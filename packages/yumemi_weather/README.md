@@ -33,5 +33,4 @@ See [yumemi_weather_example.dart] for details.
 <!-- Links -->
 
 [yumemi-inc/flutter-training]: ../../README.md
-
 [yumemi_weather_example.dart]: example/yumemi_weather_example.dart
