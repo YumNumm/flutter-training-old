@@ -16,10 +16,10 @@ class HomeView extends ConsumerWidget with DelayedActionMixin {
       // 直近のRouteを取得
       final router = ref.read(routerProvider);
       // 既にWeatherResultViewに遷移している場合は何もしない
-      if (router.location == const WeatherResultViewRoute().location) {
+      if (router.location == const WeatherViewRoute().location) {
         return;
       }
-      const WeatherResultViewRoute().push(context);
+      const WeatherViewRoute().push(context);
     });
 
     return const SizedBox.expand(

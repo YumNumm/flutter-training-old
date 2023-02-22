@@ -3,16 +3,16 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_training/model/enum/weather_category.dart';
 import 'package:flutter_training/ui/component/weather_item_widget.dart';
 import 'package:flutter_training/ui/view/route.dart';
-import 'package:flutter_training/ui/view/weather_result_view/weather_result_viewmodel.dart';
+import 'package:flutter_training/ui/view/weather_view/weather_viewmodel.dart';
 import 'package:go_router/go_router.dart';
 import 'package:yumemi_weather/yumemi_weather.dart';
 
-class WeatherResultView extends ConsumerWidget {
-  const WeatherResultView({super.key});
+class WeatherView extends ConsumerWidget {
+  const WeatherView({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final state = ref.watch(weatherResultViewModelProvider);
+    final state = ref.watch(weatherViewModel);
 
     return Scaffold(
       body: SafeArea(
@@ -21,8 +21,8 @@ class WeatherResultView extends ConsumerWidget {
             children: [
               const Spacer(),
               WeatherResultWidget(
-                minTemp: '**°C',
-                maxTemp: '**°C',
+                minTemp: (state.minTemp != null) ? '${state.minTemp}°C' : '',
+                maxTemp: (state.maxTemp != null) ? '${state.maxTemp}°C' : '',
                 category: state.category,
               ),
               Expanded(
@@ -45,13 +45,13 @@ class WeatherResultView extends ConsumerWidget {
                               try {
                                 ref
                                     .read(
-                                      weatherResultViewModelProvider.notifier,
+                                      weatherViewModel.notifier,
                                     )
-                                    .fetchThrowsWeather();
+                                    .fetchWeather();
                               } on YumemiWeatherError {
                                 ref
                                     .read(
-                                  weatherResultViewModelProvider.notifier,
+                                  weatherViewModel.notifier,
                                 )
                                     .showErrorDialog(
                                   title: 'エラーが発生しました',
@@ -67,10 +67,9 @@ class WeatherResultView extends ConsumerWidget {
                                         context.pop();
                                         ref
                                             .read(
-                                              weatherResultViewModelProvider
-                                                  .notifier,
+                                              weatherViewModel.notifier,
                                             )
-                                            .fetchThrowsWeather();
+                                            .fetchWeather();
                                       },
                                       child: const Text('RETRY'),
                                     )
@@ -141,7 +140,7 @@ class WeatherResultWidget extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 16),
                 child: Text(
-                  'minTemp',
+                  minTemp,
                   style: t.textTheme.labelLarge?.copyWith(
                     color: Colors.blue,
                   ),
@@ -150,7 +149,7 @@ class WeatherResultWidget extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 16),
                 child: Text(
-                  'maxTemp',
+                  maxTemp,
                   style: t.textTheme.labelLarge?.copyWith(
                     color: Colors.red,
                   ),

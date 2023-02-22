@@ -7,5 +7,7 @@ part 'weather_result_state.freezed.dart';
 class WeatherResultState with _$WeatherResultState {
   const factory WeatherResultState({
     @Default(null) WeatherCategory? category,
+    @Default(null) int? maxTemp,
+    @Default(null) int? minTemp,
   }) = _WeatherResultState;
 }

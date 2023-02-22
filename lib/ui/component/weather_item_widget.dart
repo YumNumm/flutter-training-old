@@ -15,7 +15,6 @@ class WeatherCategoryItemWidget extends StatelessWidget {
     if (category == null) {
       return const AspectRatio(
         aspectRatio: 1,
-        child: Placeholder(),
       );
     }
     final image = category!.svgImageKey;
