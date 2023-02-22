@@ -5,8 +5,8 @@ import 'package:flutter_training/model/weather_result_view/weather_result_state.
 import 'package:flutter_training/ui/component/error_dialog.dart';
 import 'package:yumemi_weather/yumemi_weather.dart';
 
-class WeatherResultViewModel extends StateNotifier<WeatherResultState> {
-  WeatherResultViewModel() : super(const WeatherResultState());
+class WeatherViewModel extends StateNotifier<WeatherResultState> {
+  WeatherViewModel() : super(const WeatherResultState());
 
   final _api = YumemiWeather();
 
@@ -44,7 +44,7 @@ class WeatherResultViewModel extends StateNotifier<WeatherResultState> {
       );
 }
 
-final weatherResultViewModelProvider =
-    StateNotifierProvider<WeatherResultViewModel, WeatherResultState>(
-  (ref) => WeatherResultViewModel(),
+final WeatherViewModelProvider =
+    StateNotifierProvider<WeatherViewModel, WeatherResultState>(
+  (ref) => WeatherViewModel(),
 );
