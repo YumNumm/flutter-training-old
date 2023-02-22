@@ -17,6 +17,8 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$WeatherResultState {
   WeatherCategory? get category => throw _privateConstructorUsedError;
+  int? get maxTemp => throw _privateConstructorUsedError;
+  int? get minTemp => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $WeatherResultStateCopyWith<WeatherResultState> get copyWith =>
@@ -29,7 +31,7 @@ abstract class $WeatherResultStateCopyWith<$Res> {
           WeatherResultState value, $Res Function(WeatherResultState) then) =
       _$WeatherResultStateCopyWithImpl<$Res, WeatherResultState>;
   @useResult
-  $Res call({WeatherCategory? category});
+  $Res call({WeatherCategory? category, int? maxTemp, int? minTemp});
 }
 
 /// @nodoc
@@ -46,12 +48,22 @@ class _$WeatherResultStateCopyWithImpl<$Res, $Val extends WeatherResultState>
   @override
   $Res call({
     Object? category = freezed,
+    Object? maxTemp = freezed,
+    Object? minTemp = freezed,
   }) {
     return _then(_value.copyWith(
       category: freezed == category
           ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
               as WeatherCategory?,
+      maxTemp: freezed == maxTemp
+          ? _value.maxTemp
+          : maxTemp // ignore: cast_nullable_to_non_nullable
+              as int?,
+      minTemp: freezed == minTemp
+          ? _value.minTemp
+          : minTemp // ignore: cast_nullable_to_non_nullable
+              as int?,
     ) as $Val);
   }
 }
@@ -64,7 +76,7 @@ abstract class _$$_WeatherResultStateCopyWith<$Res>
       __$$_WeatherResultStateCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({WeatherCategory? category});
+  $Res call({WeatherCategory? category, int? maxTemp, int? minTemp});
 }
 
 /// @nodoc
@@ -79,12 +91,22 @@ class __$$_WeatherResultStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? category = freezed,
+    Object? maxTemp = freezed,
+    Object? minTemp = freezed,
   }) {
     return _then(_$_WeatherResultState(
       category: freezed == category
           ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
               as WeatherCategory?,
+      maxTemp: freezed == maxTemp
+          ? _value.maxTemp
+          : maxTemp // ignore: cast_nullable_to_non_nullable
+              as int?,
+      minTemp: freezed == minTemp
+          ? _value.minTemp
+          : minTemp // ignore: cast_nullable_to_non_nullable
+              as int?,
     ));
   }
 }
@@ -92,15 +114,22 @@ class __$$_WeatherResultStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_WeatherResultState implements _WeatherResultState {
-  const _$_WeatherResultState({this.category = null});
+  const _$_WeatherResultState(
+      {this.category = null, this.maxTemp = null, this.minTemp = null});
 
   @override
   @JsonKey()
   final WeatherCategory? category;
+  @override
+  @JsonKey()
+  final int? maxTemp;
+  @override
+  @JsonKey()
+  final int? minTemp;
 
   @override
   String toString() {
-    return 'WeatherResultState(category: $category)';
+    return 'WeatherResultState(category: $category, maxTemp: $maxTemp, minTemp: $minTemp)';
   }
 
   @override
@@ -109,11 +138,13 @@ class _$_WeatherResultState implements _WeatherResultState {
         (other.runtimeType == runtimeType &&
             other is _$_WeatherResultState &&
             (identical(other.category, category) ||
-                other.category == category));
+                other.category == category) &&
+            (identical(other.maxTemp, maxTemp) || other.maxTemp == maxTemp) &&
+            (identical(other.minTemp, minTemp) || other.minTemp == minTemp));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, category);
+  int get hashCode => Object.hash(runtimeType, category, maxTemp, minTemp);
 
   @JsonKey(ignore: true)
   @override
@@ -124,11 +155,17 @@ class _$_WeatherResultState implements _WeatherResultState {
 }
 
 abstract class _WeatherResultState implements WeatherResultState {
-  const factory _WeatherResultState({final WeatherCategory? category}) =
-      _$_WeatherResultState;
+  const factory _WeatherResultState(
+      {final WeatherCategory? category,
+      final int? maxTemp,
+      final int? minTemp}) = _$_WeatherResultState;
 
   @override
   WeatherCategory? get category;
+  @override
+  int? get maxTemp;
+  @override
+  int? get minTemp;
   @override
   @JsonKey(ignore: true)
   _$$_WeatherResultStateCopyWith<_$_WeatherResultState> get copyWith =>
