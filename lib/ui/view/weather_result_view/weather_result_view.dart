@@ -4,6 +4,8 @@ import 'package:flutter_training/model/enum/weather_category.dart';
 import 'package:flutter_training/ui/component/weather_item_widget.dart';
 import 'package:flutter_training/ui/view/route.dart';
 import 'package:flutter_training/ui/view/weather_result_view/weather_result_viewmodel.dart';
+import 'package:go_router/go_router.dart';
+import 'package:yumemi_weather/yumemi_weather.dart';
 
 class WeatherResultView extends ConsumerWidget {
   const WeatherResultView({super.key});
@@ -39,9 +41,43 @@ class WeatherResultView extends ConsumerWidget {
                             child: const Text('Close'),
                           ),
                           TextButton(
-                            onPressed: () => ref
-                                .read(weatherResultViewModelProvider.notifier)
-                                .fetchWeather(),
+                            onPressed: () {
+                              try {
+                                ref
+                                    .read(
+                                      weatherResultViewModelProvider.notifier,
+                                    )
+                                    .fetchThrowsWeather();
+                              } on YumemiWeatherError {
+                                ref
+                                    .read(
+                                  weatherResultViewModelProvider.notifier,
+                                )
+                                    .showErrorDialog(
+                                  title: 'エラーが発生しました',
+                                  description: '再試行してください',
+                                  context: context,
+                                  actions: [
+                                    TextButton(
+                                      onPressed: () => context.pop(),
+                                      child: const Text('CLOSE'),
+                                    ),
+                                    TextButton(
+                                      onPressed: () {
+                                        context.pop();
+                                        ref
+                                            .read(
+                                              weatherResultViewModelProvider
+                                                  .notifier,
+                                            )
+                                            .fetchThrowsWeather();
+                                      },
+                                      child: const Text('RETRY'),
+                                    )
+                                  ],
+                                );
+                              }
+                            },
                             child: const Text('Reload'),
                           ),
                         ],
