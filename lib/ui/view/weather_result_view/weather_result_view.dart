@@ -1,20 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_training/model/enum/weather_category.dart';
 import 'package:flutter_training/ui/component/weather_item_widget.dart';
+import 'package:flutter_training/ui/view/weather_result_view/weather_result_viewmodel.dart';
 
 class WeatherResultView extends ConsumerWidget {
   const WeatherResultView({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final t = Theme.of(context);
+    final state = ref.watch(weatherResultViewModelProvider);
+
     return Scaffold(
       body: SafeArea(
         child: SizedBox.expand(
           child: Column(
             children: [
               const Spacer(),
-              const WeatherResultWidget(),
+              WeatherResultWidget(
+                minTemp: '**°C',
+                maxTemp: '**°C',
+                category: state.category,
+              ),
               Expanded(
                 child: Column(
                   children: [
@@ -31,7 +38,9 @@ class WeatherResultView extends ConsumerWidget {
                             child: const Text('Close'),
                           ),
                           TextButton(
-                            onPressed: () {},
+                            onPressed: () => ref
+                                .read(weatherResultViewModelProvider.notifier)
+                                .fetchWeather(),
                             child: const Text('Reload'),
                           ),
                         ],
@@ -50,8 +59,15 @@ class WeatherResultView extends ConsumerWidget {
 
 class WeatherResultWidget extends StatelessWidget {
   const WeatherResultWidget({
+    required this.minTemp,
+    required this.maxTemp,
+    required this.category,
     super.key,
   });
+
+  final String minTemp;
+  final String maxTemp;
+  final WeatherCategory? category;
 
   @override
   Widget build(BuildContext context) {
@@ -62,7 +78,24 @@ class WeatherResultWidget extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          const WeatherItemWidget(),
+          AnimatedSwitcher(
+            duration: const Duration(milliseconds: 400),
+            switchInCurve: Curves.easeOutCirc,
+            switchOutCurve: Curves.easeInQuad,
+            transitionBuilder: (child, animation) {
+              return FadeTransition(
+                opacity: animation,
+                child: ScaleTransition(
+                  scale: animation,
+                  child: child,
+                ),
+              );
+            },
+            child: WeatherCategoryItemWidget(
+              key: ValueKey(category),
+              category: category,
+            ),
+          ),
           Row(
             crossAxisAlignment: CrossAxisAlignment.baseline,
             textBaseline: TextBaseline.alphabetic,

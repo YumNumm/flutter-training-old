@@ -13,7 +13,9 @@ dependencies:
     sdk: flutter
   flutter_riverpod: ^2.2.0
   flutter_svg: ^2.0.1
+  freezed_annotation: ^2.2.0
   hooks_riverpod: ^2.2.0
+  json_annotation: ^4.8.0
   riverpod_annotation: ^1.2.1
   yumemi_weather:
     path: packages/yumemi_weather
@@ -25,6 +27,8 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
+  freezed: ^2.3.2
+  json_serializable: ^6.6.1
   pedantic_mono: ^1.21.1
   riverpod_generator: ^1.2.0
 
