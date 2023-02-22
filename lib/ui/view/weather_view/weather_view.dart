@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_training/model/enum/weather_category.dart';
 import 'package:flutter_training/ui/component/weather_item_widget.dart';
-import 'package:flutter_training/ui/view/route.dart';
+import 'package:flutter_training/ui/route.dart';
 import 'package:flutter_training/ui/view/weather_view/weather_viewmodel.dart';
 import 'package:go_router/go_router.dart';
 import 'package:yumemi_weather/yumemi_weather.dart';
@@ -12,7 +12,7 @@ class WeatherView extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final state = ref.watch(weatherViewModel);
+    final state = ref.watch(weatherViewModelProvider);
 
     return Scaffold(
       body: SafeArea(
@@ -45,13 +45,13 @@ class WeatherView extends ConsumerWidget {
                               try {
                                 ref
                                     .read(
-                                      weatherViewModel.notifier,
+                                      weatherViewModelProvider.notifier,
                                     )
                                     .fetchWeather();
                               } on YumemiWeatherError {
                                 ref
                                     .read(
-                                  weatherViewModel.notifier,
+                                  weatherViewModelProvider.notifier,
                                 )
                                     .showErrorDialog(
                                   title: 'エラーが発生しました',
@@ -67,7 +67,7 @@ class WeatherView extends ConsumerWidget {
                                         context.pop();
                                         ref
                                             .read(
-                                              weatherViewModel.notifier,
+                                              weatherViewModelProvider.notifier,
                                             )
                                             .fetchWeather();
                                       },

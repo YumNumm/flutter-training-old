@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_training/ui/view/route.dart';
+import 'package:flutter_training/ui/route.dart';
 
 class RouteErrorScreen extends StatelessWidget {
   const RouteErrorScreen(this.error, {super.key});

@@ -66,7 +66,7 @@ class WeatherViewModel extends StateNotifier<WeatherResultState> {
       );
 }
 
-final weatherViewModel =
+final weatherViewModelProvider =
     StateNotifierProvider<WeatherViewModel, WeatherResultState>(
   (ref) => WeatherViewModel(),
 );
