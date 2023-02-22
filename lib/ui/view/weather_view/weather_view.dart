@@ -12,7 +12,7 @@ class WeatherView extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final state = ref.watch(WeatherViewModelProvider);
+    final state = ref.watch(weatherViewModel);
 
     return Scaffold(
       body: SafeArea(
@@ -21,8 +21,8 @@ class WeatherView extends ConsumerWidget {
             children: [
               const Spacer(),
               WeatherResultWidget(
-                minTemp: '**°C',
-                maxTemp: '**°C',
+                minTemp: (state.minTemp != null) ? '${state.minTemp}°C' : '',
+                maxTemp: (state.maxTemp != null) ? '${state.maxTemp}°C' : '',
                 category: state.category,
               ),
               Expanded(
@@ -45,13 +45,13 @@ class WeatherView extends ConsumerWidget {
                               try {
                                 ref
                                     .read(
-                                      WeatherViewModelProvider.notifier,
+                                      weatherViewModel.notifier,
                                     )
-                                    .fetchThrowsWeather();
+                                    .fetchWeather();
                               } on YumemiWeatherError {
                                 ref
                                     .read(
-                                  WeatherViewModelProvider.notifier,
+                                  weatherViewModel.notifier,
                                 )
                                     .showErrorDialog(
                                   title: 'エラーが発生しました',
@@ -67,10 +67,9 @@ class WeatherView extends ConsumerWidget {
                                         context.pop();
                                         ref
                                             .read(
-                                              WeatherViewModelProvider
-                                                  .notifier,
+                                              weatherViewModel.notifier,
                                             )
-                                            .fetchThrowsWeather();
+                                            .fetchWeather();
                                       },
                                       child: const Text('RETRY'),
                                     )
@@ -141,7 +140,7 @@ class WeatherResultWidget extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 16),
                 child: Text(
-                  'minTemp',
+                  minTemp,
                   style: t.textTheme.labelLarge?.copyWith(
                     color: Colors.blue,
                   ),
@@ -150,7 +149,7 @@ class WeatherResultWidget extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 16),
                 child: Text(
-                  'maxTemp',
+                  maxTemp,
                   style: t.textTheme.labelLarge?.copyWith(
                     color: Colors.red,
                   ),

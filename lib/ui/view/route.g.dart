@@ -8,7 +8,7 @@ part of 'route.dart';
 
 List<GoRoute> get $appRoutes => [
       $homeRoute,
-      $weatherResultViewRoute,
+      $weatherViewRoute,
     ];
 
 GoRoute get $homeRoute => GoRouteData.$route(
@@ -31,17 +31,17 @@ extension $HomeRouteExtension on HomeRoute {
       context.pushReplacement(location, extra: this);
 }
 
-GoRoute get $weatherResultViewRoute => GoRouteData.$route(
-      path: '/weather_result_view',
-      factory: $WeatherResultViewRouteExtension._fromState,
+GoRoute get $weatherViewRoute => GoRouteData.$route(
+      path: '/weather_view',
+      factory: $WeatherViewRouteExtension._fromState,
     );
 
-extension $WeatherResultViewRouteExtension on WeatherResultViewRoute {
-  static WeatherResultViewRoute _fromState(GoRouterState state) =>
-      const WeatherResultViewRoute();
+extension $WeatherViewRouteExtension on WeatherViewRoute {
+  static WeatherViewRoute _fromState(GoRouterState state) =>
+      const WeatherViewRoute();
 
   String get location => GoRouteData.$location(
-        '/weather_result_view',
+        '/weather_view',
       );
 
   void go(BuildContext context) => context.go(location, extra: this);

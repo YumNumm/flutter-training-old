@@ -1,5 +1,9 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_training/model/api/fetch_weather_request.dart';
+import 'package:flutter_training/model/api/fetch_weather_response.dart';
 import 'package:flutter_training/model/enum/weather_category.dart';
 import 'package:flutter_training/model/weather_result_view/weather_result_state.dart';
 import 'package:flutter_training/ui/component/error_dialog.dart';
@@ -10,8 +14,8 @@ class WeatherViewModel extends StateNotifier<WeatherResultState> {
 
   final _api = YumemiWeather();
 
-  @Deprecated('fetchThrowsWeatherを使ってください')
-  void fetchWeather() {
+  @Deprecated('fetchWeatherを使ってください')
+  void fetchSimpleWeather() {
     final result = _api.fetchSimpleWeather();
     final category = WeatherCategory.fromString(result);
     state = state.copyWith(
@@ -19,11 +23,29 @@ class WeatherViewModel extends StateNotifier<WeatherResultState> {
     );
   }
 
+  @Deprecated('fetchWeatherを使ってください')
   void fetchThrowsWeather() {
     final result = _api.fetchThrowsWeather('area');
     final category = WeatherCategory.fromString(result);
     state = state.copyWith(
       category: category,
+    );
+  }
+
+  void fetchWeather() {
+    final req = FetchWeatherRequest(
+      area: 'area',
+      date: DateTime.now(),
+    );
+    final result = _api.fetchWeather(json.encode(req));
+    final response = FetchWeatherResponse.fromJson(
+      json.decode(result) as Map<String, dynamic>,
+    );
+    // update state
+    state = state.copyWith(
+      category: response.weatherCondition,
+      maxTemp: response.maxTemperature,
+      minTemp: response.minTemperature,
     );
   }
 
@@ -44,7 +66,7 @@ class WeatherViewModel extends StateNotifier<WeatherResultState> {
       );
 }
 
-final WeatherViewModelProvider =
+final weatherViewModel =
     StateNotifierProvider<WeatherViewModel, WeatherResultState>(
   (ref) => WeatherViewModel(),
 );
