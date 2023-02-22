@@ -15,7 +15,7 @@ class HomeRoute extends GoRouteData {
   const HomeRoute();
 
   @override
-  Widget build(BuildContext context, GoRouterState state) => const HomeView();
+  Widget build(BuildContext context, GoRouterState state) => HomeView();
 }
 
 @TypedGoRoute<WeatherResultViewRoute>(
