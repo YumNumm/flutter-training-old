@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_training/ui/route.dart';
 import 'package:flutter_training/ui/theme/theme.dart';
-import 'package:flutter_training/ui/view/route.dart';
 
 class App extends ConsumerWidget {
   const App({super.key});

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_training/ui/mixin/delayed_action.dart';
-import 'package:flutter_training/ui/view/route.dart';
+import 'package:flutter_training/ui/route.dart';
 
 class HomeView extends ConsumerWidget with DelayedActionMixin {
   HomeView({super.key});
