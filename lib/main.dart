@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_training/ui/theme/theme.dart';
-import 'package:flutter_training/ui/view/main_view.dart';
+import 'package:flutter_training/ui/view/weather_result_view/weather_result_view.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -12,11 +13,13 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Yumemi Weather',
-      theme: lightTheme,
-      darkTheme: darkTheme,
-      home: const MainView(),
+    return ProviderScope(
+      child: MaterialApp(
+        title: 'Yumemi Weather',
+        theme: lightTheme,
+        darkTheme: darkTheme,
+        home: const WeatherResultView(),
+      ),
     );
   }
 }

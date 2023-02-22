@@ -1,13 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_training/model/enum/weather_category.dart';
 
-class WeatherItemWidget extends StatelessWidget {
-  const WeatherItemWidget({super.key});
+class WeatherCategoryItemWidget extends StatelessWidget {
+  const WeatherCategoryItemWidget({
+    this.category,
+    super.key,
+  });
+
+  final WeatherCategory? category;
 
   @override
   Widget build(BuildContext context) {
-    return const AspectRatio(
+    if (category == null) {
+      return const AspectRatio(
+        aspectRatio: 1,
+        child: Placeholder(),
+      );
+    }
+    final image = category!.svgImageKey;
+    return AspectRatio(
+      key: ValueKey(image),
       aspectRatio: 1,
-      child: Placeholder(),
+      child: SvgPicture.asset(
+        image,
+      ),
     );
   }
 }
