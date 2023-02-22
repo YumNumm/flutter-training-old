@@ -1,5 +1,4 @@
-
-# 各種Providerについて
+# 各種 Provider について
 
 ```mermaid
 flowchart TB
@@ -44,19 +43,22 @@ weatherViewModelProvider -..-> routerProvider;
 
 ### weatherViewModelProvider
 
-- WeatherViewのViewModelを提供する
+- WeatherView の ViewModel を提供する
 - `lib/ui/view/weather_view/weather_viewmodel.dart`に記述
 
-# 各種Viewについて
+# 各種 View について
+
 ### App
+
 - `lib/ui/app.dart`に記述
-- 上位のWidget
+- 上位の Widget
 
 ### HomeView
+
 - `lib/ui/view/home_view/home_view.dart`に記述
 - 緑色の画面
 - 指定時間後に`WeatherView`に遷移する
 
 ### WeatherView
-- `lib/ui/view/weather_view/weather_view.dart`に記述
 
+- `lib/ui/view/weather_view/weather_view.dart`に記述
